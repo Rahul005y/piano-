@@ -1,0 +1,109 @@
+    body {
+        background: #2e2e2f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+ 
+    .piano {
+        position: relative;
+        display: flex;
+        /* background: rgb(3, 32, 32); */
+        padding: 20px;
+    }
+
+    /* white keys */
+    .white-key {
+        width: 60px;
+        height: 260px;
+        border: 1px solid #888;
+        background-color: rgb(18, 4, 43);
+        border-radius: 0 0 6px 6px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .white-key:active {
+        background: #2d1a57;
+    }
+
+    /* black keys */
+    .black-key {
+        width: 40px;
+        height: 160px;
+        background: linear-gradient(to bottom, #000, #222);
+        position: absolute;
+        z-index: 10;
+        border-radius: 0 0 6px 6px;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+
+    /* double labels */
+    .black-key .top-label {
+        position: absolute;
+        top: 75%;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+    }
+
+    .black-key .bottom-label {
+        position: absolute;
+        top: 85%;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+    }
+
+    .black-key .bottom-label {
+        margin-top: 4px;
+    }
+
+    /* OCTAVE 1 */
+    .pos1 { left: 60px; }
+    .pos2 { left: 120px; }
+    .pos4 { left: 250px; }
+    .pos5 { left: 310px; }
+    .pos6 { left: 370px; }
+
+
+    /* OCTAVE 2 */
+    .pos8  { left: 490px; }
+    .pos9  { left: 560px; }
+    .pos11 { left: 675px; }
+    .pos12 { left: 737px; }
+    .pos13 { left: 800px; }
+
+
+    /* OCTAVE 3 */
+    .pos15 { left: 920px; }
+    .pos16 { left: 985px; }
+    .pos18 { left: 1110px; }
+    .pos19 { left: 1170px; }
+    .pos20 { left: 1230px; }
+
+
+
+    .black-key:active {
+        background: #444;
+    }
+
+    .active-key {
+        filter: brightness(1.4);
+        transform: scale(0.98);
+    }
